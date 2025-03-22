@@ -96,8 +96,8 @@
 		return {0 : MJPointMake(x, y), 1 : MJSizeMake(w, h)}; 
 	};
 
-	MJRangeMake = function(x, y) { 
-		return {0 : x, 1 : y}; 
+	MJRangeMake = function(location, length) { 
+		return {0 : location, 1 : length}; 
 	};
 
 	// 递归打印controller的层级结构
