@@ -72,7 +72,7 @@
 	// 获取按钮绑定的所有TouchUpInside事件的方法名
 	MJBtnTouchUpEvent = function(btn) { 
 		var events = [];
-		var allTargets = btn.allTargets().allObjects()
+		var allTargets = btn.allTargets.allObjects()
 		var count = allTargets.count;
     	for (var i = count - 1; i >= 0; i--) { 
     		if (btn != allTargets[i]) {
@@ -94,6 +94,10 @@
 
 	MJRectMake = function(x, y, w, h) { 
 		return {0 : MJPointMake(x, y), 1 : MJSizeMake(w, h)}; 
+	};
+
+	MJRangeMake = function(x, y) { 
+		return {0 : x, 1 : y}; 
 	};
 
 	// 递归打印controller的层级结构
